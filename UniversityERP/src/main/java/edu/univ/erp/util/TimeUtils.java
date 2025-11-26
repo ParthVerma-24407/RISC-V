@@ -1,0 +1,16 @@
+package edu.univ.erp.util;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public final class TimeUtils {
+
+    private static final DateTimeFormatter FORMATTER =
+            DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
+    private TimeUtils() {}
+
+    public static String nowAsString() {
+        return LocalDateTime.now().format(FORMATTER);
+    }
+}
